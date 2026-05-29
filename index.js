@@ -21,3 +21,22 @@
   }
 
 })();
+
+// Burger menu
+const burger = document.querySelector('.btn-burger');
+const mainNav = document.querySelector('.main-nav');
+if (burger && mainNav) {
+  burger.addEventListener('click', () => {
+    const open = mainNav.classList.toggle('is-open');
+    burger.classList.toggle('is-open', open);
+    burger.setAttribute('aria-expanded', open);
+  });
+  // Close on nav link click
+  mainNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mainNav.classList.remove('is-open');
+      burger.classList.remove('is-open');
+      burger.setAttribute('aria-expanded', false);
+    });
+  });
+}

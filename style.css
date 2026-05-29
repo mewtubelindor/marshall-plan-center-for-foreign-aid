@@ -102,6 +102,58 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   gap: 0.25rem;
 }
+/* Burger button — hidden on desktop */
+.btn-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  margin-left: 0.5rem;
+}
+.btn-burger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--ink-mid);
+  transition: transform 0.2s, opacity 0.2s;
+}
+/* Animated X when open */
+.btn-burger.is-open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.btn-burger.is-open span:nth-child(2) { opacity: 0; }
+.btn-burger.is-open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+@media (max-width: 700px) {
+  .btn-burger { display: flex; }
+
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 70px; /* matches header height */
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border-mid);
+    flex-direction: column;
+    padding: 0.75rem 0 1rem;
+    gap: 0;
+    z-index: 99;
+  }
+  .main-nav.is-open { display: flex; }
+
+  .main-nav a {
+    padding: 0.75rem 2rem;
+    font-size: 0.85rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .main-nav a:last-of-type { border-bottom: none; }
+
+  /* Move search button inside nav on mobile */
+  .btn-search { display: none; }
+}
 
 .main-nav a {
   color: var(--ink-mid);
