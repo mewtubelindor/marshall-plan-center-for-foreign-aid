@@ -3,14 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marshall Plan Center for Foreign Aid</title>
+  <title>Policy</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-
-
 </head>
 <body>
 
@@ -32,9 +30,8 @@
         </div>
       </a>
       <nav class="main-nav">
-        
         <a href="history.html">History</a>
-        <a href="policy.html">Policy</a>
+        <a href="policy.html" class="nav-active" aria-current="page">Policy</a>
         <a href="research.html">Research</a>
         <a href="about.html">About</a>
         <button class="btn-search" aria-label="Search">
@@ -44,54 +41,33 @@
         </button>
       </nav>
       <button class="btn-burger" aria-label="Menu" aria-expanded="false">
-  <span></span><span></span><span></span>
-</button>
-      
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
-  <!-- ARTICLES -->
-  <main class="main-content">
+  <!-- SECTION -->
+  <main class="section-main">
     <div class="container">
-      <div class="articles-grid">
 
-        <!-- Article 1 — Feature (wide, image left) -->
-        <a href="article-marshall-plan-context.html" class="card card--feature">
-          <div class="card-art"><img src="https://www.trumanlibrary.gov/public/styles/tiff_conversion/public/photographs/73/73-3398.tif.jpg?VersionId=ASkwlcHnHcPt36c_0wKEjDOINIgQ_YaE&itok=c9QiuJ8x" alt="Truman's Cabinet"></div>
-          <div class="card-body">
-            <span class="card-tag">Historical Analysis</span>
-            <h2 class="card-title">The Marshall Plan in Context: Reassessing Historical Conditions</h2>
-            <p class="card-excerpt">Made possible by industrialized and bureaucratic Western Europe, the urgency of the Cold War, and shifting domestic policy away towards interventionism, the Marshall Plan was a specific policy for a specific historical circumstance.</p>
-            <div class="card-meta">
-              <span class="card-author">Ari Yamashita</span>
-              <span class="card-dot">·</span>
-              <span>April 24, 2026</span>
-            </div>
+      <div class="section-header">
+        <h1 class="section-title">Policy</h1>
+        <span class="section-count">2 Articles</span>
+        <div class="section-rule"></div>
+      </div>
+
+      <div class="section-grid">
+
+        <a href="article-ukraine.html" class="card card--portrait">
+          <div class="card-art">
+            <img
+              src="https://i.insider.com/64151705e4a9f30018a6c238?width=2000&format=jpeg&auto=webp"
+              alt="Ukrainian flag over rubble"
+            />
           </div>
-        </a>
-
-        <!-- Article 2 — standard -->
-        <a href="article-iraq-afghanistan.html" class="card card--standard">
-          <div class="card-art card-art--2"><img src="https://tse2.mm.bing.net/th/id/OIP.zRj2SeLPPhTzIgn9kd_57wHaEK?r=0&cb=thfvnextfalcon&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Truman's Cabinet"></div>
-          <div class="card-body">
-            <span class="card-tag">Commentary</span>
-            <h3 class="card-title">What Iraq and Afghanistan Reveal about the Foreign Aid Debate</h3>
-            <p class="card-excerpt">Americans are divided on the topic of foreign aid, but misconceptions about spending are half the explanation. Foreign aid is neither a straightforward moral good nor a complete budget-draining failure.</p>
-            <div class="card-meta">
-              <span class="card-author">Ari Yamashita</span>
-              <span class="card-dot">·</span>
-              <span>May 26, 2026</span>
-            </div>
-          </div>
-        </a>
-
-        <!-- Article 3 — standard -->
-        <a href="article-ukraine.html" class="card card--standard card--standard-right">
-          <div class="card-art card-art--3"><img src="https://i.insider.com/64151705e4a9f30018a6c238?width=2000&format=jpeg&auto=webp" alt="Ukrainian flag over rubble"></div>
           <div class="card-body">
             <span class="card-tag">Policy Brief</span>
-            <h3 class="card-title">Policy Recommendations for Ukraine</h3>
-            <p class="card-excerpt">Russia is facing the unthinkable; it is losing to Ukraine, and the world must decide what comes next. Ukraine requires rebuilding and a coordinated international recovery strategy on the scale of the Marshall Plan.</p>
+            <h2 class="card-title">Policy Recommendations for Ukraine</h2>
             <div class="card-meta">
               <span class="card-author">Ari Yamashita</span>
               <span class="card-dot">·</span>
@@ -100,13 +76,16 @@
           </div>
         </a>
 
-        <!-- Article 4 — full-width horizontal -->
-        <a href="article-what-makes-successful-aid.html" class="card card--horizontal">
-          <div class="card-art card-art--4"><img src="https://education.cfr.org/sites/default/files/images/image/2024/03/Development.jpg" alt="Foreign aid development programs"></div>
+        <a href="article-what-makes-successful-aid.html" class="card card--portrait">
+          <div class="card-art">
+            <img
+              src="https://education.cfr.org/sites/default/files/images/image/2024/03/Development.jpg"
+              alt="Foreign aid and development programs"
+            />
+          </div>
           <div class="card-body">
             <span class="card-tag">Policy Brief</span>
-            <h3 class="card-title">What Makes a Successful Foreign Aid Plan?</h3>
-            <p class="card-excerpt">The role of U.S. aid has changed from its beginnings in Germany and Japan to missions in Somalia, Haiti, and Kosovo. What structural issues undermine missions, and how can the U.S. government ensure long-term success?</p>
+            <h2 class="card-title">What Makes a Successful Foreign Aid Plan?</h2>
             <div class="card-meta">
               <span class="card-author">Ari Yamashita</span>
               <span class="card-dot">·</span>
@@ -114,8 +93,6 @@
             </div>
           </div>
         </a>
-
-     
 
       </div>
     </div>

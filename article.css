@@ -180,6 +180,17 @@
   line-height: 1.5;
 }
 
+/* Inline body links */
+.article-body p a {
+  color: var(--ink-mid);
+  border-bottom: 1px solid var(--border-mid);
+  transition: color 0.15s, border-color 0.15s;
+}
+.article-body p a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
 /* Inline footnote superscripts */
 sup.ref {
   font-size: 0.65em;

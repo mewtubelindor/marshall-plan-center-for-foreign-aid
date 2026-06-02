@@ -500,3 +500,248 @@ a.footer-logo-block {
 a.logo-block { gap: 0.75rem; }
 a.footer-logo-block { gap: 0.7rem; flex-shrink: 0; }
 
+/* ============================================================
+   SECTION PAGES  (history.html · policy.html · research.html)
+   ============================================================ */
+.section-main {
+  padding: 3.5rem 0 5rem;
+}
+
+.section-header {
+  margin-bottom: 0;
+}
+
+.section-title {
+  font-family: var(--font-ui);
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink);
+  line-height: 1;
+  margin-bottom: 0.55rem;
+}
+
+.section-count {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 0.63rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.section-rule {
+  height: 1px;
+  background: var(--border-mid);
+  margin-bottom: 2rem;
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Portrait card — used in section pages & search results */
+.card--portrait {
+  flex-direction: column;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  transition: transform 0.22s, box-shadow 0.22s;
+}
+
+.card--portrait:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.38);
+}
+
+.card--portrait .card-art {
+  height: 210px;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.card--portrait .card-body {
+  padding: 1.5rem 1.75rem 1.25rem;
+}
+
+.card--portrait .card-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+}
+
+/* Active nav link */
+.main-nav a.nav-active {
+  color: var(--ink);
+}
+
+/* ============================================================
+   SEARCH OVERLAY
+   ============================================================ */
+.search-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(17, 18, 20, 0.97);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 2.5rem 3rem;
+  overflow-y: auto;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.22s ease;
+}
+
+.search-overlay.is-open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.search-overlay-box {
+  width: 100%;
+  max-width: 920px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1.5px solid var(--accent);
+  margin-bottom: 2.5rem;
+}
+
+.search-bar-icon {
+  color: var(--accent);
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.search-field {
+  flex: 1;
+  min-width: 0;
+  background: none;
+  border: none;
+  outline: none;
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-weight: 400;
+  color: var(--ink);
+  caret-color: var(--accent);
+  letter-spacing: -0.01em;
+}
+
+.search-field::placeholder { color: var(--ink-faint); }
+
+.search-close-btn {
+  background: none;
+  border: none;
+  color: var(--ink-faint);
+  cursor: pointer;
+  padding: 0.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s;
+  flex-shrink: 0;
+}
+.search-close-btn:hover { color: var(--ink); }
+
+.search-result-count {
+  font-family: var(--font-ui);
+  font-size: 0.63rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.search-hint {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  color: var(--ink-faint);
+  letter-spacing: 0.04em;
+  margin-bottom: 1.25rem;
+}
+
+.search-result-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 1.25rem;
+}
+
+.search-result-grid .card {
+  animation: none;
+  opacity: 1;
+}
+
+.search-empty-msg {
+  font-family: var(--font-body);
+  font-style: italic;
+  color: var(--ink-faint);
+  font-size: 1rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+/* ============================================================
+   ABOUT PAGE
+   ============================================================ */
+.about-main {
+  padding: 3.5rem 0 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-inner {
+  text-align: center;
+  max-width: 580px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+
+.about-title {
+   font-family: var(--font-ui);
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink);
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+
+.about-accent {
+  width: 44px;
+  height: 2px;
+  background: var(--accent);
+  margin: 0 auto 2rem;
+}
+
+.about-text {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--ink-mid);
+}
+
+.about-download {
+  margin-top: 1.25rem;
+}
+
+.about-dl {
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent-dim);
+  transition: border-color 0.15s;
+}
+.about-dl:hover {
+  border-bottom-color: var(--accent);
+}
+
